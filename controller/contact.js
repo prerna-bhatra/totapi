@@ -39,7 +39,7 @@ exports.contact = async(req,res)=>
         res.json({"error":error})
       } else {
         console.log('Email sent: ' + info.response);
-        let data = 'Email sent: ' + info.response;
+        let data = 'Thanks your query has been sent to team of treader '
         res.json({data})
       }
     });
