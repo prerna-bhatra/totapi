@@ -35,8 +35,12 @@ exports.contact = async(req,res)=>
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
+
+        res.json({"error":error})
       } else {
         console.log('Email sent: ' + info.response);
+        let data = 'Email sent: ' + info.response;
+        res.json({data})
       }
     });
 
